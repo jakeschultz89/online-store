@@ -1,0 +1,25 @@
+.item {
+    border: 1px solid #333;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: -1px 1px 3px 0 #999;
+}
+
+h5 {
+    margin-top: 5px;
+}
+
+.item .controls {
+    background-color: #fafafa;
+    margin-top:12px;
+}
+
+.item .controls > * {
+    display: inline-block;
+}
+
+.item .controls .btn-add {
+    margin-left: 20px;
+}
