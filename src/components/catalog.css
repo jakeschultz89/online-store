@@ -3,3 +3,8 @@
     margin-right: 10px;
     margin-bottom: 15px;
 }
+
+.image {
+    max-width: 750px;
+    max-height: 100px;
+}
