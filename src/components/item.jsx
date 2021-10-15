@@ -16,13 +16,13 @@ const Item = (props) => {
 
             <h5>{props.data.title || "no title"}</h5>
 
-            <label>Price ${props.data.price.toFixed(2)}</label>
-            <label>Total ${props.data.price.toFixed(2)} </label>
-
+            <label className="price">${props.data.price.toFixed(2)} </label>
+            <label className="total">$ {props.data.price.toFixed(2)}</label>
+        
             <div className="controls">
-                <QuantityPicker minimum={props.data.minimum} />
+                <QuantityPicker minimum={props.data.minimum || 1} />
                 <button onClick={handleAdd} className="btn btn-sm btn-dark btn-add">
-                    Add
+                <i class="fa fa-cart-plus" aria-hidden="true"></i>
                 </button>
             </div>
         </div>

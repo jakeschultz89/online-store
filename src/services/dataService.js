@@ -1,57 +1,123 @@
 var catalog = [
     {
-        _id:"123399r318723912xc98123",
-        title:"Banana",
+        _id:"133399r318723912xc98123",
+        price:.41,
+        stock:421,
+        title:"Bananas",
         image:"banana.jpeg",
-        price:.99,
-        category:"Fruit",
-        stock:79,
-        minimum:1
+        discount: 0,
+        minimum: 6,
+        category:"Fruit"
     },
     {
-        _id:"123396r318723912xc98124",
-        title:"Apple",
+        _id:"123399r318723912xc98123",
+        price:1.09,
+        stock:321,
+        title:"Apples",
         image:"apple.jpeg",
-        price:1.49,
-        category:"Fruit",
-        stock:59,
-        minimum:1
+        discount: 0,
+        minimum: 1,
+        category:"Fruit"
     },
     {
-        _id:"123399r368723912xc98125",
-        title:"Coconut",
+        _id:"123369r318723912xc98123",
+        price:1.91,
+        stock:259,
+        title:"Coconuts",
         image:"coconut.jpeg",
-        price:7.99,
-        category:"Fruit",
-        stock:198,
-        minimum:2
+        discount: 0,
+        minimum: 1,
+        category:"Fruit"
     },
     {
-        _id:"123399r318726912xc98125",
+        _id:"123399r318923912xc98123",
+        price:4.09,
+        stock:42,
+        title:"Corn",
+        image:"corn.webp",
+        discount: 0,
+        minimum: 4,
+        category:"Vegetable"
+    },
+    {
+        _id:"123399r318723912xc08123",
+        price:4.43,
+        stock:98,
+        title:"Eggs",
+        image:"eggs.webp",
+        discount: 0,
+        minimum: 12,
+        category:"Dairy"
+    },
+    {
+        _id:"123399r318723912xc98129",
+        price:7.06,
+        stock:982,
         title:"Grapes",
         image:"grape.jpeg",
-        price:.19,
-        category:"Fruit",
-        stock:324,
-        minimum:25
+        discount: 0,
+        minimum: 100,
+        category:"Fruit"
     },
     {
-        _id:"123399r318723912xc96125",
-        title:"Pineapple",
+        _id:"123399r318703912xc98123",
+        price:3.83,
+        stock:69,
+        title:"Milk",
+        image:"milk.jpeg",
+        discount: 0,
+        minimum: 1,
+        category:"Dairy"
+    },
+    {
+        _id:"123389i318723912xc98123",
+        price:1.73,
+        stock:300,
+        title:"Pineapples",
         image:"pineapple.png",
-        price:9.69,
-        category:"Fruit",
-        stock:39,
-        minimum:2
+        discount: 0,
+        minimum: 1,
+        category:"Fruit"
     },
     {
-        _id:"123399r318723912xc98165",
+        _id:"123399x118723912xc98123",
+        price:1.59,
+        stock:62,
+        title:"Tortillas",
+        image:"tortillas.webp",
+        discount: 0,
+        minimum: 6,
+        category:"Bread"
+    },
+    {
+        _id:"123399j318723912xc98123",
+        price:3.07,
+        stock:29,
         title:"Watermelon",
         image:"watermelon.jpg",
-        price:5.99,
-        category:"Fruit",
-        stock:43,
-        minimum:1
+        discount: 0,
+        minimum: 1,
+        category:"Fruit"
+    },
+    {
+        _id:"120399r318723919xc98123",
+        price:1.32,
+        stock:421,
+        title:"Penne Pasta",
+        image:"penne.webp",
+        discount: 0,
+        minimum: 1,
+        category:"Pasta"
+    },
+    {
+        _id:"124399r318723912xc98123",
+        price:4.10,
+        stock:49,
+        title:"Cranberry Juice",
+        image:"cranberry-juice.webp",
+        discount: 0,
+        minimum: 1,
+        category:"Beverages"
     }
 ];
 
@@ -63,13 +129,9 @@ class DataService {
         return catalog;
     }
 
-    saveItem() {
+    saveItem() {}
 
-    }
-
-    saveOrder() {
-
-    }
+    saveOrder() {}
 }
 
 export default DataService;
