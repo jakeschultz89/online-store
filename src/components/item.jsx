@@ -1,14 +1,26 @@
 import "./item.css";
+import React, { useState } from "react";
 import QuantityPicker from "./quantityPicker";
 
 const Item = (props) => {
     // state
+    const [quantity, setQuantity] = useState(props.data.minimum || 1);
 
     // functions
     const handleAdd = () => {
         console.log("Adding item to cart");
     };
     
+    const onQuantityChange = (quantity) => {
+        console.log("new quantity", quantity);
+        setQuantity(quantity);
+    };
+
+    const getTotal = () => {
+        let total = props.data.price * quantity;
+        return total.toFixed(2);
+    }
+
     // return
     return (
         <div className="item">
@@ -16,13 +28,14 @@ const Item = (props) => {
 
             <h5>{props.data.title || "no title"}</h5>
 
-            <label className="price">${props.data.price.toFixed(2)} </label>
-            <label className="total">$ {props.data.price.toFixed(2)}</label>
+            <label className="price">Price ${props.data.price.toFixed(2)} </label>
+            <br />
+            <label className="total">Total ${getTotal()}</label>
         
             <div className="controls">
-                <QuantityPicker minimum={props.data.minimum || 1} />
+                <QuantityPicker minimum={props.data.minimum || 1} onChange={onQuantityChange} />
                 <button onClick={handleAdd} className="btn btn-sm btn-dark btn-add">
-                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                <i className="fa fa-cart-plus" aria-hidden="true"></i>
                 </button>
             </div>
         </div>

@@ -5,14 +5,17 @@ const QuantityPicker = (props) => {
     const [quantity, setQuantity] = useState(props.minimum);
 
     const increase = () => {
-        setQuantity(quantity+1);
+        let val = quantity+1;
+        setQuantity(val);
+        props.onChange(val) //notify parent that the val has changed
     };
 
     const decrease = () => {
         // dont go below 1
         let newVal = quantity -1;
         if(newVal >= props.minimum) {
-            setQuantity(quantity-1);
+            setQuantity(newVal);
+            props.onChange(newVal); //notify parent that the val has changed
         }
     };
     

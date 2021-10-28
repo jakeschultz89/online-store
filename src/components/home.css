@@ -1,0 +1,10 @@
+.home-pictures {
+    display: flex;
+    width: 400px;
+    max-height: 200px;
+}
+
+.home-pictures img {
+    width: 100%;
+    height: 100%;
+}
