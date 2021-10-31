@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 import "./catalog.css";
 import Item from "./item";
@@ -9,23 +10,24 @@ const Catalog = () => {
     const [categories, setCategories] = useState([]);
     const [itemsToDisplay, setItemsToDisplay] = useState([]);
 
-    const loadCatalog = () => {
+    const loadCatalog = async () => {
         // create an instance of the service
         // call the method
         let service = new DataService();
-        let catalog = service.getCatalog();
-        console.log("the data", catalog);
+        let catalog = await service.getCatalog();
 
         // find the list of unique categories
-        let cats = [];
-        for (let i = 0; i <catalog.length; i++) {
-            let prod = catalog[i];
-            // if the category doesn't exist inside the cats array
-            // add it
-            if(!cats.includes(prod.category)) {
-                cats.push(prod.category);
-            }
-        }
+        // let cats = [];
+        // for (let i = 0; i <catalog.length; i++) {
+        //     let prod = catalog[i];
+        //     // if the category doesn't exist inside the cats array
+        //     // add it
+        //     if(!cats.includes(prod.category)) {
+        //         cats.push(prod.category);
+        //     }
+        // }
+
+        let cats = await service.getCategories();
 
         console.log("unique category", cats);
         setCategories(cats);
@@ -33,7 +35,6 @@ const Catalog = () => {
         setItemList(catalog);
         setItemsToDisplay(catalog); //display all
     };
-
     const test1 = () => {
         console.log("Test 1");
         let nums = [1, 3, 4213, 2873, 456, 1, 23, 5, 346, 123, 345, 123, 2345, 12, 3, 546, 768, 789];

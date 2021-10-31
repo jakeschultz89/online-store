@@ -4,6 +4,7 @@ import Catalog from "./components/catalog";
 import Home from "./components/home";
 import About from "./components/about";
 import Cart from "./components/cart";
+import Admin from "./components/admin";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/about" exact component={About} />
         <Route path="/catalog" exact component={Catalog} />
         <Route path="/cart" exact component={Cart} />
+        <Route path="/admin" exact component={Admin} />
 
 
         <Footer />
