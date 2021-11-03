@@ -1,0 +1,21 @@
+.item-cart {
+    background-color: white;
+    border: 1px solid #333;
+    border-radius:6px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-cart img {
+    flex: 2;
+    height: 130px;
+}
+
+.item-cart .info {
+    flex: 6;
+}
+
+.item-cart label {
+    flex: 1;
+}

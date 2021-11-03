@@ -5,6 +5,7 @@ import Home from "./components/home";
 import About from "./components/about";
 import Cart from "./components/cart";
 import Admin from "./components/admin";
+import GlobalContext from "./context/globalContext";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -17,6 +18,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 function App() {
   return (
     <div className="App">
+    <GlobalContext>
       <BrowserRouter>
         <NavBar />
 
@@ -29,6 +31,7 @@ function App() {
 
         <Footer />
       </BrowserRouter>
+    </GlobalContext>
     </div>
   );
 }
