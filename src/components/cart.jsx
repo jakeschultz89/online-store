@@ -6,6 +6,17 @@ import ItemInCart from "./itemInCart";
 const Cart = () => {
     const prodsInCart = useContext(StoreContext).cart;
 
+
+    const saveTheOrder = () => {
+        let ord = {
+            products: cart,
+            userId: 2139,
+            coupon: ""
+        };
+
+        
+    };
+
     return (
         <div className="cart-page">
             

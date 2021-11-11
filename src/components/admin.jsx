@@ -1,6 +1,7 @@
 import "./admin.css";
 import { useState } from "react";
 import DataService from "../services/dataService";
+import CouponForm from "./couponForm";
 
 const Admin = () => {
 
@@ -34,6 +35,7 @@ const Admin = () => {
 
     return (
         <div className="admin-page">
+            <section>
             <h1>Manage your products</h1>
 
             <div className="my-control">
@@ -61,8 +63,12 @@ const Admin = () => {
                 <input name="minimum" onChange={textChanged} type="number" />
             </div>
             <div className="my-control">
-                <button onClick={handleSave} className="btn btn-dark">Register Item</button>
+                <button onClick={handleSave} className="btn btn-dark">Register Product</button>
             </div>
+            </section>
+            <section>
+                <CouponForm />
+            </section>
         </div>
     )
 }

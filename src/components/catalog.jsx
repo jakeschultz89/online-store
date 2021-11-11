@@ -16,17 +16,6 @@ const Catalog = () => {
         let service = new DataService();
         let catalog = await service.getCatalog();
 
-        // find the list of unique categories
-        // let cats = [];
-        // for (let i = 0; i <catalog.length; i++) {
-        //     let prod = catalog[i];
-        //     // if the category doesn't exist inside the cats array
-        //     // add it
-        //     if(!cats.includes(prod.category)) {
-        //         cats.push(prod.category);
-        //     }
-        // }
-
         let cats = await service.getCategories();
 
         console.log("unique category", cats);

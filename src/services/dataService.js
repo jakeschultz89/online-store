@@ -153,4 +153,9 @@ class DataService {
     saveOrder() {}
 }
 
+async submitOrder(order) {
+    let res = await axios.post(this,serverURL + "/api/", order);
+    console.log("Result of saving order", res.data);
+}
+
 export default DataService;
